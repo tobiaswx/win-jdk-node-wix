@@ -47,10 +47,9 @@ jobs:
         with:
           push: ${{ github.event_name != 'pull_request' }}
           image: win-jdk-node-wix
-          registry: ghcr.io
-          username: ${{ secrets.GHCR_USERNAME }}
-          password: ${{ secrets.GHCR_TOKEN }}
-          enableBuildKit: true
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
