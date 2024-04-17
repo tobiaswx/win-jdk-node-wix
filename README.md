@@ -1,4 +1,5 @@
 # Windows Server Core Docker Image with JDK 21, Node 20, and WiX Toolset 3.14
+[![Docker](https://github.com/tobiaswx/win-jdk-node-wix/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/tobiaswx/win-jdk-node-wix/actions/workflows/docker-publish.yml)
 
 This Docker image provides a Windows Server Core environment with JDK 21, Node.js 20, and WiX Toolset 3.14, tailored for CI/CD pipelines.
 
