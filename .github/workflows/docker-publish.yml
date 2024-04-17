@@ -6,9 +6,9 @@ on:
   push:
     branches: [ "main" ]
     # Publish semver tags as releases.
-    tags: [ 'v*.*.*' ]
-  pull_request:
-    branches: [ "main" ]
+    tags: [ '*.*.*' ]
+#  pull_request:
+#    branches: [ "main" ]
 
 env:
   REGISTRY: ghcr.io
@@ -42,6 +42,7 @@ jobs:
         with:
           push: ${{ github.event_name != 'pull_request' }}
           image: win-jdk-node-wix
+          addLatest: true
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
